@@ -1,0 +1,501 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================================
+   GLOBAL STYLES
+   ========================================================= */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @apply bg-bg font-sans text-stone-600 antialiased;
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+video,
+svg,
+canvas {
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid #0F766E;
+  outline-offset: 3px;
+}
+
+::selection {
+  background: #0F766E;
+  color: #fff;
+}
+
+/* =========================================================
+   BACKGROUND GRID
+   ========================================================= */
+
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(28, 25, 23, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(28, 25, 23, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-position: center top;
+  mask-image: radial-gradient(
+    ellipse at center,
+    #000 30%,
+    transparent 75%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    #000 30%,
+    transparent 75%
+  );
+  pointer-events: none;
+}
+
+/* =========================================================
+   GRADIENT TEXT
+   ========================================================= */
+
+.text-gradient {
+  background: linear-gradient(90deg, #0F766E, #10B981);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================================================
+   SECTION LABELS
+   ========================================================= */
+
+.eyebrow {
+  @apply text-xs font-bold uppercase tracking-[0.25em] text-accent;
+  display: block;
+  margin: 0 0 0.75rem;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   HEADINGS AND PARAGRAPHS
+   ========================================================= */
+
+h1,
+h2,
+h3 {
+  @apply font-display font-bold;
+  color: inherit;
+  line-height: 1.2;
+  margin-top: 0;
+  text-wrap: balance;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.035em;
+}
+
+h2 {
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.025em;
+}
+
+h3 {
+  margin-bottom: 0.875rem;
+  letter-spacing: -0.015em;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.card {
+  @apply rounded-3xl border border-line bg-surface shadow-sm;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  min-width: 0;
+  height: 100%;
+  overflow-wrap: break-word;
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.card:hover {
+  box-shadow: 0 12px 30px rgba(28, 25, 23, 0.07);
+}
+
+/* =========================================================
+   REVEAL ANIMATION
+   ========================================================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================================
+   GENERAL LAYOUT
+   ========================================================= */
+
+.flex,
+.grid {
+  min-width: 0;
+}
+
+.flex > *,
+.grid > * {
+  min-width: 0;
+}
+
+p,
+li,
+.card,
+button,
+a {
+  overflow-wrap: break-word;
+}
+
+[id] {
+  scroll-margin-top: 6rem;
+}
+
+/* =========================================================
+   ABOUT SECTION — COMPACT SPACING
+   ========================================================= */
+
+.about-section {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  overflow: visible;
+  scroll-margin-top: 6rem;
+}
+
+/* Keep About content visible */
+.about-section .about-intro,
+.about-section .about-service-card {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  will-change: auto;
+}
+
+/* About heading */
+.about-section h2 {
+  max-width: 520px;
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
+
+/* About paragraphs */
+.about-section .space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+/* About service cards */
+.about-section .about-service-card {
+  min-width: 0;
+  height: 100%;
+  padding: 1.5rem;
+}
+
+/* =========================================================
+   TABLET RESPONSIVENESS
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  html {
+    scroll-padding-top: 5rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    margin-bottom: 1.25rem;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding-top: 0.75rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .about-section h2 {
+    max-width: 100%;
+  }
+
+  .about-section .about-service-card {
+    padding: 1.375rem;
+  }
+}
+
+/* =========================================================
+   MOBILE RESPONSIVENESS
+   ========================================================= */
+
+@media (max-width: 640px) {
+  html {
+    scroll-padding-top: 4.5rem;
+  }
+
+  body {
+    line-height: 1.6;
+  }
+
+  .card {
+    padding: 1.125rem;
+    border-radius: 1.25rem;
+  }
+
+  .eyebrow {
+    font-size: 0.6875rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 0.625rem;
+  }
+
+  h1 {
+    margin-bottom: 1rem;
+    letter-spacing: -0.025em;
+  }
+
+  h2 {
+    margin-bottom: 0.875rem;
+    letter-spacing: -0.02em;
+  }
+
+  h3 {
+    margin-bottom: 0.75rem;
+  }
+
+  .bg-grid {
+    background-size: 32px 32px;
+  }
+
+  .reveal {
+    transform: translateY(16px);
+  }
+
+  [id] {
+    scroll-margin-top: 4.5rem;
+  }
+
+  .about-section {
+    padding: 0.5rem 1.25rem 2rem;
+  }
+
+  .about-section .about-intro {
+    gap: 1.25rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.875rem;
+    line-height: 1.25;
+  }
+
+  .about-section .about-service-card {
+    padding: 1.25rem;
+    border-radius: 1.25rem;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE SCREENS
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .card {
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  .eyebrow {
+    letter-spacing: 0.15em;
+  }
+
+  .about-section {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    will-change: auto;
+  }
+
+  .animate-rise,
+  .animate-float {
+    animation: none !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   GLOBAL SECTION SPACING FIX
+   ========================================= */
+
+section {
+  margin-block: 0;
+  scroll-margin-top: 6rem;
+}
+
+/* Reduce excessive vertical padding on sections */
+section:not(.hero-section) {
+  padding-top: clamp(1.5rem, 3vw, 2.5rem);
+  padding-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+
+/* Remove unnecessary top spacing from common containers */
+section > div:first-child {
+  margin-top: 0;
+}
+
+/* Keep content visible when reveal animation is not triggered */
+.reveal {
+  opacity: 1;
+  transform: none;
+  will-change: auto;
+}
+
+/* Maintain the original animation when activated */
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Keep the About section compact */
+.about-section {
+  margin-top: 0;
+  padding-top: 1rem;
+  padding-bottom: 2.5rem;
+}
+
+/* Reduce section spacing on mobile */
+@media (max-width: 640px) {
+  section:not(.hero-section) {
+    padding-top: 1.25rem;
+    padding-bottom: 2rem;
+  }
+
+  .about-section {
+    padding-top: 0.5rem;
+    padding-bottom: 2rem;
+  }
+}
