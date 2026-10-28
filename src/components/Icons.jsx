@@ -16,7 +16,11 @@ export function SocialLinks({ items, className = '' }) {
       {items.map((s) => (
         <li key={s.name}>
           <a href={s.url} target="_blank" rel="noreferrer" aria-label={s.name} title={s.name}
+<<<<<<< HEAD
              className="grid h-11 w-11 place-items-center rounded-full border border-white/30 bg-white/10 text-white transition hover:-translate-y-0.5 hover:border-glow hover:bg-glow hover:text-[#06293F]">
+=======
+             className="grid h-11 w-11 place-items-center rounded-full border border-line bg-surface text-stone-600 transition hover:-transtone-y-0.5 hover:border-accent hover:text-accent">
+>>>>>>> e8ac33cfca897500158a363306c8cc6cc4448be4
             {icons[s.name]}
           </a>
         </li>
