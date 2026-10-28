@@ -3,18 +3,12 @@
 @tailwind utilities;
 
 /* =====================================================
-<<<<<<< HEAD
    PREMIUM PORTFOLIO — OCEAN BLUE & AMBER
    Same class names, new colours and UI polish
-=======
-   PREMIUM PORTFOLIO — MIDNIGHT NAVY & CHAMPAGNE GOLD
-   Colors changed only; original spacing preserved
->>>>>>> e8ac33cfca897500158a363306c8cc6cc4448be4
    ===================================================== */
 
 :root {
   color-scheme: light;
-<<<<<<< HEAD
   --bg: #f3f8fb;
   --surface: #ffffff;
   --surface-soft: #e6f1f8;
@@ -30,28 +24,6 @@
   --shadow-md: 0 14px 34px rgba(11, 60, 93, 0.14);
   --shadow-lg: 0 26px 60px rgba(11, 60, 93, 0.2);
   --radius-card: 20px;
-=======
-
-  --bg: #f7f5f0;
-  --surface: #ffffff;
-  --surface-soft: #eeebe3;
-
-  --text: #202733;
-  --text-muted: #68717d;
-
-  --primary: #182b49;
-  --primary-hover: #263e60;
-  --accent: #a78345;
-  --accent-soft: #f4ecdc;
-
-  --line: #e4dfd4;
-  --shadow-sm: 0 4px 16px rgba(24, 43, 73, 0.045);
-  --shadow-md: 0 12px 32px rgba(24, 43, 73, 0.08);
-  --shadow-lg: 0 22px 55px rgba(24, 43, 73, 0.12);
-
-  --radius-card: 18px;
-  --section-space: clamp(2.5rem, 5vw, 4rem);
->>>>>>> e8ac33cfca897500158a363306c8cc6cc4448be4
   --content-width: 1160px;
 }
 

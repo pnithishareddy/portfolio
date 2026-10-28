@@ -2,11 +2,7 @@ import { useState } from 'react'
 import { profile, socials } from '../data'
 import { icons, SocialLinks } from './Icons'
 
-<<<<<<< HEAD
 const field = 'w-full'
-=======
-const field = 'w-full rounded-xl border border-line bg-white px-4 py-3 text-stone-900 outline-none transition placeholder:text-stone-500 focus:border-glow focus:ring-2 focus:ring-glow/20'
->>>>>>> e8ac33cfca897500158a363306c8cc6cc4448be4
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' })

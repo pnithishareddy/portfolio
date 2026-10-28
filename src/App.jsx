@@ -12,7 +12,6 @@ export default function App() {
   return (
     <>
       <Navbar />
-<<<<<<< HEAD
       <div className="lg:ml-72">
         <main>
           <Hero />
@@ -23,16 +22,6 @@ export default function App() {
         </main>
         <Footer />
       </div>
-=======
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
-      </main>
-      <Footer />
->>>>>>> e8ac33cfca897500158a363306c8cc6cc4448be4
     </>
   )
 }
