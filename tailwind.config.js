@@ -3,17 +3,10 @@ export default {
   content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
     extend: {
-<<<<<<< HEAD
       colors: { bg: '#F3F8FB', surface: '#FFFFFF', line: '#DCE8F0', accent: '#B45309', 'accent-soft': '#E6F1F8', glow: '#F2A900', navy: '#0B3C5D', ink: '#0A2536', muted: '#4F6577' },
       fontFamily: {
         sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
         display: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-=======
-      colors: { bg: '#FAF8F5', surface: '#FFFFFF', line: 'rgba(28,25,23,0.1)', accent: '#0F766E', glow: '#10B981' },
-      fontFamily: {
-        sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
-        display: ['Fraunces', 'Georgia', 'serif'],
->>>>>>> e8ac33cfca897500158a363306c8cc6cc4448be4
         mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
       },
       keyframes: {
